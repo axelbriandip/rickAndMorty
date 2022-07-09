@@ -4,6 +4,6 @@
 }
 .container-footer footer {
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
     border-top: 1px solid var(--extra-slate-brown);
 }
