@@ -17,6 +17,11 @@
     border-radius: .75rem;
     margin-bottom: 1rem;
     overflow: hidden;
+    transition: all .2s;
+    cursor: pointer;
+}
+.card-resident:hover {
+    background-color: var(--slate-brown-hover);
 }
 .container-img {
     width: 35%;
