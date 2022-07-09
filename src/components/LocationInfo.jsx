@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import SearchLocation from './SearchLocation';
+import ResidentInfo from './ResidentInfo';
 
 const LocationInfo = () => {
     // RANDOM LOCATION
@@ -18,6 +18,7 @@ const LocationInfo = () => {
         axios.get(`https://rickandmortyapi.com/api/location/${id}`)
             .then(res => setLocation(res.data));
     }
+    console.log(location);
     return (
         <div>
             {/* RANDOM LOCATION */}
@@ -31,6 +32,12 @@ const LocationInfo = () => {
             <button onClick={() => fn_searchID(searchID)}>Search</button>
             <span>{location.name} - {location.id}</span>
             <hr/>
+            {/* RESIDENT INFO */}
+            {
+                location.residents?.map(resident => (
+                    <ResidentInfo key={resident} resident={resident}/>
+                ))
+            }
         </div>
     );
 };
