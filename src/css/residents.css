@@ -47,3 +47,9 @@
     font-size: .7rem !important;
     color: var(--extra-slate-brown);
 }
+.icon-status {
+    font-size: .6rem;
+    margin-right: .3rem;
+    position: relative;
+    bottom: .1rem;
+}
