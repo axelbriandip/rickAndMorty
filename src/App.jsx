@@ -9,7 +9,9 @@ import './css/footer.css';
 function App() {
   return (
     <div className="App">
+      <div class="front-page"></div>
       <LocationInfo/>
+      <footer>Rick and Morty Wiki hecho en Academlo</footer>
     </div>
   )
 }

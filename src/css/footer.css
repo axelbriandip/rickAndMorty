@@ -1,9 +1,19 @@
 @import './styles.css';
-.container-footer {
-    margin-top: 3rem;
+html {
+    min-height: 100%;
+    position: relative;
 }
-.container-footer footer {
-    text-align: center;
-    padding: 1.5rem 0;
-    border-top: 1px solid var(--extra-slate-brown);
+body {
+    margin: 0;
+    margin-bottom: 40px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .75rem 0;
 }
