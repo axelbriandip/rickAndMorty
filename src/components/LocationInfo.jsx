@@ -26,12 +26,14 @@ const LocationInfo = () => {
             <input className='input-search' type="text" value={searchID} onChange={e => setSearchID(e.target.value)} placeholder="Type a location ID"/>
             <button className='btn-search' onClick={() => fn_searchID(searchID)}>Search</button>
             {/* RANDOM LOCATION */}
-            <span><b>name: </b>{location.name}</span>
-            <span><b>type: </b>{location.type}</span>
-            <span><b>dimension: </b>{location.dimension}</span>
-            <span><b>residents: </b>{location.residents?.length}</span>
-            <hr/>
+            <h3 className='name'>{location.name}</h3>
+            <div className="container-span">
+                <span className='type'><b>type: </b>{location.type}</span>
+                <span className='dimension'><b>dimension: </b>{location.dimension}</span>
+                <span className='residents'><b>residents: </b>{location.residents?.length}</span>
+            </div>
             {/* RESIDENT INFO */}
+            <h3>Residents</h3>
             {
                 location.residents?.map(resident => (
                     <ResidentInfo key={resident} resident={resident}/>

@@ -14,9 +14,6 @@
 body {
     background-color: var(--brown);
 }
-span {
-    display: block;
-}
 .App {
     display: flex;
     justify-content: center;
