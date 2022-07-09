@@ -3,6 +3,7 @@ import './css/styles.css';
 import './css/front-page.css';
 import './css/search.css';
 import './css/info-location.css';
+import './css/residents.css';
 
 function App() {
   return (

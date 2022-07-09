@@ -10,6 +10,7 @@
     --black: #333;
     --brown: #272121;
     --slate-brown: #443737;
+    --extra-slate-brown: #a1887f;
 }
 body {
     background-color: var(--brown);

@@ -10,12 +10,18 @@ const ResidentInfo = ({ resident }) => {
     }, [])
     console.log(residentItem);
     return (
-        <div>
-            <span><b>name: </b>{residentItem?.name}</span>
-            <img src={residentItem.image}/>
-            <span><b>status: </b>{residentItem.status}</span>
-            <span><b>origin.name: </b>{residentItem.origin?.name}</span>
-            <span><b>episode.length: </b>{residentItem.episode?.length}</span>
+        <div className='card-resident'>
+            <div className="container-img">
+                <img className='img-resident' src={residentItem.image}/>
+            </div>
+            <div className="container-info">
+                <span className='name-resident'><b>{residentItem?.name}</b></span>
+                <span className='status-resident'>{residentItem.status} - {residentItem.species}</span>
+                <span className='span-extra'>origin</span>
+                <span className='origin-name-resident'>{residentItem.origin?.name}</span>
+                <span className='span-extra'>episodes where appear</span>
+                <span className='episode-length-resident'>{residentItem.episode?.length}</span>
+            </div>
         </div>
     );
 };

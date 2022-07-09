@@ -17,6 +17,7 @@ const LocationInfo = () => {
     const fn_searchID = (id) => {
         axios.get(`https://rickandmortyapi.com/api/location/${id}`)
             .then(res => setLocation(res.data));
+        setSearchID('');
     }
     console.log(location);
     return (
@@ -33,12 +34,14 @@ const LocationInfo = () => {
                 <span className='residents'><b>residents: </b>{location.residents?.length}</span>
             </div>
             {/* RESIDENT INFO */}
-            <h3>Residents</h3>
-            {
-                location.residents?.map(resident => (
-                    <ResidentInfo key={resident} resident={resident}/>
-                ))
-            }
+            <h3 className='title-residents'>Residents</h3>
+            <div className="container-residents">
+                {
+                    location.residents?.map(resident => (
+                        <ResidentInfo key={resident} resident={resident}/>
+                    ))
+                }
+            </div>
         </div>
     );
 };
