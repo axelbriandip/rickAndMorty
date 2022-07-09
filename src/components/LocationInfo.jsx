@@ -20,17 +20,16 @@ const LocationInfo = () => {
     }
     console.log(location);
     return (
-        <div>
+        <div className='container'>
+            <h1 className='title'>Rick and Morty Wiki</h1>
+            {/* SEARCH LOCATION */}
+            <input className='input-search' type="text" value={searchID} onChange={e => setSearchID(e.target.value)} placeholder="Type a location ID"/>
+            <button className='btn-search' onClick={() => fn_searchID(searchID)}>Search</button>
             {/* RANDOM LOCATION */}
             <span><b>name: </b>{location.name}</span>
             <span><b>type: </b>{location.type}</span>
             <span><b>dimension: </b>{location.dimension}</span>
             <span><b>residents: </b>{location.residents?.length}</span>
-            <hr/>
-            {/* SEARCH LOCATION */}
-            <input type="text" value={searchID} onChange={e => setSearchID(e.target.value)}/>
-            <button onClick={() => fn_searchID(searchID)}>Search</button>
-            <span>{location.name} - {location.id}</span>
             <hr/>
             {/* RESIDENT INFO */}
             {

@@ -1,0 +1,24 @@
+@import './styles.css';
+.container {
+    width: 65vw;
+}
+.title {
+    text-align: center;
+    margin: 2rem 0;
+    font-family: 'Pangolin', cursive;
+}
+.input-search {
+    width: 90%;
+    padding: .5rem;
+    outline: none;
+    background-color: var(--slate-brown);
+    text-align: center;
+}
+.btn-search {
+    width: 10%;
+    padding: .5rem;
+    background-color: var(--brown);
+    border: 1px solid var(--white);
+    cursor: pointer;
+    margin-bottom: 1rem;
+}

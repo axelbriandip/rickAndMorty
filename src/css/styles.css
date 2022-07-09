@@ -3,15 +3,21 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    color: black;
+    color: var(--white);
 }
 :root {
     --white: #eee;
     --black: #333;
+    --brown: #272121;
+    --slate-brown: #443737;
 }
 body {
-    background-color: var(--white);
+    background-color: var(--brown);
 }
 span {
     display: block;
+}
+.App {
+    display: flex;
+    justify-content: center;
 }
