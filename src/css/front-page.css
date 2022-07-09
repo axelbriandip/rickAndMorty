@@ -1,0 +1,9 @@
+@import './styles.css';
+.front-page {
+    width: 100vw;
+    height: 9rem;
+    background-image: url('../img/portada2.jpg');
+    background-size: cover;
+    background-position-y: -9.5rem;
+    background-repeat: no-repeat;
+}

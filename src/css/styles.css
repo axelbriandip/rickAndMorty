@@ -7,7 +7,7 @@
 }
 :root {
     --white: #eee;
-    --black: #333
+    --black: #333;
 }
 body {
     background-color: var(--white);
