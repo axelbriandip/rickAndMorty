@@ -3,4 +3,15 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    color: black;
+}
+:root {
+    --white: #eee;
+    --black: #333
+}
+body {
+    background-color: var(--white);
+}
+span {
+    display: block;
 }
