@@ -12,20 +12,38 @@ const LocationInfo = () => {
             .then(res => setLocation(res.data));
     }, [])
 
-    // SEARCH LOCATION
+    // SEARCH LOCATION ID
     const [ searchID, setSearchID ] = useState('');
     const fn_searchID = (id) => {
         axios.get(`https://rickandmortyapi.com/api/location/${id}`)
             .then(res => setLocation(res.data));
         setSearchID('');
     }
-    console.log(location);
+    // console.log(location);
+
+    // SEARCH LOCATION NAME
+    const [ searchLocation, setSearchLocation ] = useState('');
+    const [ results, setResults ] = useState([]);
+    useEffect(() => {
+        if(searchLocation !== "") {
+            axios.get(`https://rickandmortyapi.com/api/location/?name=${searchLocation}`)
+                .then(res => setResults(res.data.results));
+        } else {
+            setResults([]);
+        }
+    }, [ searchLocation ])
     return (
         <div className='container'>
             <h1 className='title'>Rick and Morty Wiki</h1>
             {/* SEARCH LOCATION */}
-            <input className='input-search' type="text" value={searchID} onChange={e => setSearchID(e.target.value)} placeholder="Type a location ID"/>
-            <button className='btn-search' onClick={() => fn_searchID(searchID)}>Search</button>
+            <input className='input-search' type="text" value={searchLocation} onChange={e => setSearchLocation(e.target.value)} placeholder="Type a location ID"/>
+            {
+                results.map(result => (
+                    <div key={result.id} onClick={() => fn_searchID(result.id)}>
+                        {result.name}
+                    </div>
+                ))
+            }
             {/* RANDOM LOCATION */}
             <h3 className='name'>{location.name}</h3>
             <div className="container-span">

@@ -18,7 +18,7 @@ const ResidentInfo = ({ resident }) => {
             <div className="container-info">
                 <span className='name-resident'><b>{residentItem?.name}</b></span>
                 <span className='status-resident'>
-                    <i class="fa-solid fa-circle icon-status" style={{color:(residentItem.status=="Alive" ? "green": (residentItem.status=="Dead" ? "red": "grey" ))}}></i>
+                    <i className="fa-solid fa-circle icon-status" style={{color:(residentItem.status=="Alive" ? "green": (residentItem.status=="Dead" ? "red": "grey" ))}}></i>
                     {residentItem.status} - {residentItem.species}
                 </span>
                 <span className='span-extra'>origin</span>
