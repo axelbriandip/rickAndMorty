@@ -11,7 +11,7 @@ const ResidentInfo = ({ resident }) => {
     }, [])
     // Determinar 'colorStatus'
     return (
-        <div className='card-resident'>
+        <div className='card-resident col-12 col-md-6'>
             <div className="container-img">
                 <img className='img-resident' src={residentItem.image}/>
             </div>

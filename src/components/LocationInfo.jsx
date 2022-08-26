@@ -53,7 +53,7 @@ const LocationInfo = () => {
             </div>
             {/* RESIDENT INFO */}
             <h3 className='title-residents'>Residents</h3>
-            <div className="container-residents">
+            <div className="container-residents row">
                 {
                     location.residents?.map(resident => (
                         <ResidentInfo key={resident} resident={resident}/>
